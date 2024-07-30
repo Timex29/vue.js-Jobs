@@ -83,20 +83,6 @@
         "contactEmail": "contact@ipsumlorem.com",
         "contactPhone": "555-555-5555"
       }
-    },
-    {
-      "title": "Timex-Company",
-      "type": "Part-Time",
-      "location": "MACABALAN",
-      "description": "CDOC\n",
-      "salary": "$100K - $125K",
-      "company": {
-        "name": "Alvarado and Hanson Inc",
-        "description": "Consequatur quia to",
-        "contactEmail": "zesecigavo@mailinator.com",
-        "contactPhone": "+1 (755) 414-8345"
-      },
-      "id": "020f"
     }
   ]
 }
