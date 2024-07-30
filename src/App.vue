@@ -1,4 +1,5 @@
 <script setup>
+  //USE https://www.netlify.com/ FOR PUBLISHING YOUR WEB APP.
 import Navbar from "@/components/Navbar.vue";
 
 import { RouterView } from "vue-router";
