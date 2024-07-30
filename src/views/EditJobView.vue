@@ -1,5 +1,5 @@
 <script setup>
-//USE https://www.netlify.com/ FOR PUBLISHING YOUR WEB APP.
+
 import router  from "@/router";
 import { onMounted, reactive } from "vue";
 import { useRoute} from "vue-router";
