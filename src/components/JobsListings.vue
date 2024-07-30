@@ -1,12 +1,12 @@
 <script setup>
 import { RouterLink } from "vue-router";
 import Joblisting from "./Joblisting.vue";
-import jobData from "@/jobs.json";
+//import jobData from "@/jobs.json";
 import { reactive, defineProps, onMounted } from "vue";
 
-//install sppiner for loading desing 
+//install sppiner for loading desing
 import PulseLoader from "vue-spinner/src/PulseLoader.vue";
-import axios  from "axios";
+import axios from "axios";
 
 defineProps({
   limit: Number,
@@ -25,10 +25,9 @@ defineProps({
 
 //const jobs = ref([]);
 
-
-const state = reactive ({
-jobs: [],
-isLoading: true
+const state = reactive({
+  jobs: [],
+  isLoading: true,
 });
 
 /**
@@ -43,16 +42,17 @@ isLoading: true
  */
 onMounted(async () => {
   try {
-    const response = await axios.get
-    //('http://localhost:5000/jobs')
-    ('/api/jobs');
+    const response = await axios.get(
+      //('http://localhost:5000/jobs')
+      "/api/jobs"
+    );
     state.jobs = response.data;
   } catch (error) {
-    console.error('Error fetching jobs', error);
-  }finally{
+    console.error("Error fetching jobs", error);
+  } finally {
     state.isLoading = false;
   }
-});  
+});
 </script>
 
 <template>
@@ -68,7 +68,6 @@ onMounted(async () => {
 
       <!--Show job listing when done loading -->
       <div v-else class="grid grid-cols-1 md:grid-cols-3 gap-6">
-
         <!--<div v-for="job in jobs" :key="job.id">
           {{ job.title }} 
           
@@ -77,14 +76,12 @@ onMounted(async () => {
           v-for="job in state.jobs.slice(0, limit || state.jobs.length)"
           :key="job.id"
           :job="job"
-          
-        /> 
+        />
         <!--for ref() is like this '
         <Joblisting
         v-for="job in jobs.slice(0, limit || jobs.length)"
           :key="job.id"
-          :job="job" /> '--> 
-
+          :job="job" /> '-->
       </div>
     </div>
   </section>
