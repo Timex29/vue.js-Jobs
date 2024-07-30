@@ -95,8 +95,7 @@ onMounted( async() => {
               id="type"
               name="type"
               class="border rounded w-full py-2 px-3"
-              required
-            >
+              required>
               <option value="Full-Time">Full-Time</option>
               <option value="Part-Time">Part-Time</option>
               <option value="Remote">Remote</option>
