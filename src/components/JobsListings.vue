@@ -2,7 +2,7 @@
 import { RouterLink } from "vue-router";
 import Joblisting from "./Joblisting.vue";
 //import jobData from "@/jobs.json";
-import { reactive, defineProps, onMounted } from "vue";
+import { reactive, onMounted } from "vue";
 
 //install sppiner for loading desing
 import PulseLoader from "vue-spinner/src/PulseLoader.vue";
